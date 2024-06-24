@@ -856,7 +856,10 @@
             function createLevel(lvl) {
 
                 if (lvl < 0) { return; } 
-                if (lvl > 5) { window.location.replace('reboot.php'); }
+                if (lvl > 5) {
+	                localStorage.setItem('lvl', 0);
+	                window.location.reload(); 
+		}
 
                 function get_lvl(lvl) {
                     switch (lvl) {
@@ -1460,7 +1463,10 @@
 
             document.visibilityState === 'hidden'; //terminated
 
-            setTimeout(() => { window.location.replace('reboot.php'); }, 500);
+            setTimeout(() => {
+		localStorage.setItem('lvl', 0);
+		window.location.reload(); 
+	    }, 500);
         });
         
 
@@ -1483,7 +1489,10 @@
                 document.body.innerHTML = "<p>Session is over</p>"; 
             }, 500);
         } else {
-            setTimeout(() => {  window.location.replace('reboot.php'); }, 500);
+            setTimeout(() => {
+		localStorage.setItem('lvl', 0);
+		window.location.reload(); 
+	    }, 500);
         }
         }
 
