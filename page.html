@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>BIOS</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link rel="stylesheet" href="/homepage.css">
+	</head>
+
+<body>
+
+	<div class="wholedamnthing">
+		<!-- top of the page title bar stuff -->
+
+		<div class="titleflex">
+			<div class="titlebox">
+				<div class="port">
+					<h1 class="titletext">Restore</h1>
+				</div>
+			</div>
+		</div>
+
+		<!-- body -->
+
+		<div class="boxen"> <!--wraps the two boxes in a relative so that they overlap -->
+			<div id="clickbox" class="bluebox" onclick="nagbox()"> <!--this worked just fine-->
+				<div class="menu">
+						<div class="menutext">
+							<ul><a href="index.html">1. Os</a></ul>
+							<ul><a href="README.md">2. About</a></ul>
+							<ul><!--this is that responive thing where it switches via context-->3. Files</ul>
+							<ul><a href="main.html">4. Back</a></ul>
+						</div>
+					</div>
+				</div>
+					<div class="transparentbuttonbox">
+
+						<div id="box" class="positiongreybox"> <!--this is the one that is going to be the modal-->
+							<div  class="greybox" onkeydown="closebox()">
+								<div class="nagtext">This Portfolio is shareware. Please feel free to copy and share, but if you like this software please consider registering it. Registration only costs a competitive salary with benefits. By registering this software you gain access to a pretty decent fullstack developer and continuing support. To register, call or email the contact information provided in your instruction manual/cover letter. A freelance version is also available, there is a registration form available under "about" on this menu. <br>
+								</div>
+							</div>
+						</div>
+						<button id="closebutton" class="button" onclick="closebox()">[  OK  ]</button>
+					</div>
+
+				</div>
+
+	</div>
+	<script>
+
+
+		function nagbox() {
+			document.getElementById("box").style.display = "block";
+			document.getElementById('closebutton').style.display = "block";
+		} 
+
+		//opening the box works juuuuuust fine. 
+
+		function closebox() {
+			document.getElementById("box").style.display = "none";
+			document.getElementById("closebutton").style.display = "none";
+		}
+
+
+
+	</script>
+
+
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>

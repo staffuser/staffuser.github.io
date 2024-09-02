@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <style>
+            body {
+                background-color: black;
+                color: #00FF00; 
+                font-family: monospace; 
+                padding: 20px;
+                animation: glitch 0.5s infinite;
+                filter: blur(0.4px);
+            }
+
+            @keyframes glitch {
+                0% { text-shadow: 2px 0 #f00, -2px 0 #0f0; }
+                25% { text-shadow: -2px 0 #00f, 2px 0 #ff0; }
+                50% { text-shadow: 2px 0 #f0f, -2px 0 #0ff; }
+                75% { text-shadow: -2px 0 #ff0, 2px 0 #0f0; }
+            }
+
+            .terminal {
+                border: 2px solid #00FF00;
+                padding: 10px;
+                overflow: hidden;
+            }
+
+            .noise {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1; 
+                background-image: url('#'); 
+                opacity: 0.2; 
+                pointer-events: none; 
+            }
+
+            a {
+            border: solid transparent;
+            position: relative;
+            font-family: 'Space Grotesk';
+            justify-content: center;
+            cursor: pointer;
+            
+            background:linear-gradient(#121213, #121213), linear-gradient(#121213 50%, rgba(18, 18, 19, 0.6) 80%, rgba(18, 18, 19, 0)),  linear-gradient(90deg, var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--pink), var(--red));
+            background-origin: border-box;
+            background-clip: padding-box, border-box, border-box;
+            background-size: 200%;
+            animation: animate 2s infinite linear;
+            }
+
+            a::before {
+            content: ' ';
+            position: absolute;
+            bottom: -4%;
+            z-index: -5;
+            background-size: 200%;
+            animation: animate 2s infinite linear;
+
+            }
+
+            a:hover, a:hover::before {
+            animation: animate 0.5s infinite linear;
+            color: #00ffea;
+            }
+
+            @keyframes animate {
+            0% {background-position: 0}
+            100% {background-position: 200%}
+            }
+
+            @media screen and (max-width: 1000px) {
+            :root {
+                --m: 2rem;
+            }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="noise"></div>
+        <div class="terminal">
+        <pre>
+            ######   #######  ######    #####    #####   ######
+            ##  ##   ##   #   ##  ##  ##   ##  ##   ##  # ## #
+            ##  ##   ## #     ##  ##  ##   ##  ##   ##    ##
+            #####    ####     #####   ##   ##  ##   ##    ##
+            ## ##    ## #     ##  ##  ##   ##  ##   ##    ##
+            ##  ##   ##   #   ##  ##  ##   ##  ##   ##    ##
+           #### ##  #######  ######    #####    #####    ####                                                      
+        </pre>
+        <h2>Welcome to the system reload your files!</h2>
+        <p>This message will close your previously opened tasks.<br>
+            You will return to the system as soon as you click the "agree" button!<br>
+            You should not do the following: <br>
+            <nav>
+                <ul>
+                    <a><li>Early release from prison</li></a>
+                    <a><li>Don't hit passers-by</li></a>
+                    <a><li>Play by the rules</li></a>
+                </ul>
+            </nav>
+        </p>
+        </div>
+        <a href="index.html">[+] Agree</a>
+        <a href="page.html">[-] No, thanks</a>
+    </body>
+</html>

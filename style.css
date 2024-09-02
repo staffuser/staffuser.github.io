@@ -1,0 +1,169 @@
+body {
+				background-color: black;
+				font-family: monospace;
+
+			}
+
+
+			@media (orientation: portrait) {
+				.wholedamnthing {
+					padding-top: 30%
+
+				}
+
+				.positiongreybox {
+					top: 10%;
+					left: 20%;
+				}
+
+			}
+
+			@media (orientation: landscape) {
+
+				.positiongreybox {
+					top: 10%;
+					left: 30%;
+				}
+			}
+
+			.titleflex {
+				max-width: 99%;
+				padding-top: 5%;
+
+			}
+
+
+
+			.titlebox {
+				margin: auto;
+				height: 5rem;
+				width: 70%;
+				min-width: 600px;
+				border-style: solid;
+				border-width: 1rem;
+				border-color: purple;
+			}
+
+			.port {
+			}
+
+			.titletext {
+				padding-top: 1%;
+				bottom: 5%;
+				margin: auto;
+				text-align: center;
+				color: #55FFFF;
+				font-size: 3rem;
+
+			}
+
+			.boxen {
+				position: relative;
+				max-width: 90%;
+			}
+
+			.bluebox {
+				margin: auto;
+				margin-top: 4rem;
+				background-color:#0000AA;
+				width:35%;
+				min-width: 300px;
+				min-height: 300px;
+				border-style:double;
+				border-color: white;
+				border-width: 1rem;
+			}
+
+			.menutext {
+				padding: 0px;
+				color: white;
+				font-size: 2rem;
+
+			}
+
+
+			a {
+				padding: 0px;
+				color: white;
+				font-size: 2rem;
+				text-decoration: none;
+			}
+
+			a:hover {
+				background-color: white;
+				color: #0000AA;
+			}
+
+			.transparentbuttonbox {
+				background-color: rgba(0, 0, 0, 0.0);
+			}
+
+			.positiongreybox {
+				display: none;
+				position: absolute;
+				padding-top: 5px;
+				padding-right: 5px;
+				padding-bottom: 5px;
+				padding-left: 5px;
+				background-color: #AAAAAA
+			}
+
+
+
+			.greybox {
+				margin: auto;
+				padding-top: 5px;
+				padding-left: 7px;
+				padding-right: 7px;
+				background-color: #AAAAAA;
+				width: 550px;
+				height: 290px;
+				font-size: 1.5em;
+				border-style: double;
+				border-color: #00AA00;
+				border-width: .5em;
+				border-spacing: 10px;
+				text-align: justify;
+				text-justify: inter-character;
+
+			}
+
+				.button {
+				display: none;
+				position: absolute;
+				left: 48%;
+				bottom: 5%;
+				font-family: monospace;
+				font-size: 1.35em;
+				background-color: #AAAAAA;
+				border: 0px;
+				animation: blink .65s infinite;
+				animation-timing-function: cubic-bezier(0.5, 0.75, 0.5, 0.75);
+				animation-direction: alternate-reverse;
+			
+			}
+
+			@keyframes blink {
+				0% {
+					background-color: #AAAAAA;
+					color: #000000;
+				}
+
+				50% {
+					background-color: #000000;
+					color: #AAAAAA;
+				}
+
+				75% {
+					background-color: #AAAAAA;
+					color: #000000;
+				}
+
+				100% { 
+				background-color: #000000;
+				color: #AAAAAA;
+
+
+				 }
+
+			}
