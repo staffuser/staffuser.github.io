@@ -1,83 +1,103 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>BIOS</title>
-  <link rel="stylesheet" href="./style.css">
-
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<!DOCTYPE html>
-<html>
-
+<meta charset="UTF-8">
+<html dir="ltr" class="offline" lang="en">
 	<head>
-		<link rel="stylesheet" href="/homepage.css">
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Security-Policy" content="block-all-mixed-content">
+
+		<meta name="robots" content="index, follow">
+
+		<meta http-equiv="x-ua-compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<!-- FB -->
+		<meta property="og:site_name" content="Restore">
+
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="color-scheme" content="light dark">
+		<meta name="theme-color" content="#fff">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,
+									maximum-scale=1.0, user-scalable=yes">
+		<script href="doc.js"></script>
+		<title>Restore</title>
+		<link rel="icon" href="favicon.ico">
+		<link rel="icon" size="16x16" type="image/x-icon" href="favicon.ico" />
+		
+		<script src="window.js" defer></script>
+		<script src="js/dnt.js" defer></script>
+		<script src="js/dom.js" defer></script>
+		<script src="js/console.js" defer></script>
+		<script src="title_copy.js" defer></script>
+		<script src="js/ver.js" defer></script>
+		<script src="js/prism.js" defer></script>
+		<script src="js/urldecode.js" defer></script>
+		<script src="js/ver_js.js" defer></script>
+
+		<link rel="stylesheet" href="style.css">
 	</head>
 
-<body>
+	<body jstcache="0" contenteditable="false" class="noselect">
+		<noscript>¯\_(ツ)_/¯</noscript>
+		<div class="wholedamnthing">
+			<!-- top of the page title bar stuff -->
 
-	<div class="wholedamnthing">
-		<!-- top of the page title bar stuff -->
-
-		<div class="titleflex">
-			<div class="titlebox">
-				<div class="port">
-					<h1 class="titletext">Restore</h1>
+			<div class="titleflex">
+				<div class="titlebox">
+					<div class="port">
+						<h1 class="titletext">Restore</h1>
+					</div>
 				</div>
 			</div>
-		</div>
 
-		<!-- body -->
+			<!-- body -->
 
-		<div class="boxen"> <!--wraps the two boxes in a relative so that they overlap -->
-			<div id="clickbox" class="bluebox" onclick="nagbox()"> <!--this worked just fine-->
-				<div class="menu">
-						<div class="menutext">
-							<ul><a href="index.html">1. Os</a></ul>
-							<ul><a href="README.md">2. About</a></ul>
-							<ul><!--this is that responive thing where it switches via context-->3. Files</ul>
-							<ul><a href="main.html">4. Back</a></ul>
-						</div>
-					</div>
-				</div>
-					<div class="transparentbuttonbox">
-
-						<div id="box" class="positiongreybox"> <!--this is the one that is going to be the modal-->
-							<div  class="greybox" onkeydown="closebox()">
-								<div class="nagtext">This Portfolio is shareware. Please feel free to copy and share, but if you like this software please consider registering it. Registration only costs a competitive salary with benefits. By registering this software you gain access to a pretty decent fullstack developer and continuing support. To register, call or email the contact information provided in your instruction manual/cover letter. A freelance version is also available, there is a registration form available under "about" on this menu. <br>
-								</div>
+			<div class="boxen"> <!--wraps the two boxes in a relative so that they overlap -->
+				<div id="clickbox" class="bluebox" onclick="nagbox()"> <!--this worked just fine-->
+					<div class="menu">
+							<div class="menutext">
+								<ul><a href="index.html">1. Os</a></ul>
+								<ul><a href="README.md">2. About</a></ul>
+								<ul><!--this is that responive thing where it switches via context-->3. Files</ul>
+								<ul><a href="main.html">4. Back</a></ul>
 							</div>
 						</div>
-						<button id="closebutton" class="button" onclick="closebox()">[  OK  ]</button>
+					</div>
+						<div class="transparentbuttonbox">
+
+							<div id="box" class="positiongreybox"> <!--this is the one that is going to be the modal-->
+								<div  class="greybox" onkeydown="closebox()">
+									<div class="nagtext">This section is shareware. Please feel free to copy and share, but if you like this software, please consider registering it. Registration costs only a competitive salary with benefits. By registering this software you get access to a pretty decent full stack developer and ongoing support. To register, call or email the contact information provided in the instruction manual/cover letter. A version for freelancers is also available: the registration form is available in the “About” section of this menu. <br>
+									</div>
+								</div>
+							</div>
+							<button id="closebutton" class="button" onclick="closebox()">[  OK  ]</button>
+						</div>
+
 					</div>
 
-				</div>
-
-	</div>
-	<script>
+		</div>
+		<script>
 
 
-		function nagbox() {
-			document.getElementById("box").style.display = "block";
-			document.getElementById('closebutton').style.display = "block";
-		} 
+			function nagbox() {
+				document.getElementById("box").style.display = "block";
+				document.getElementById('closebutton').style.display = "block";
+			} 
 
-		//opening the box works juuuuuust fine. 
+			//opening the box works juuuuuust fine. 
 
-		function closebox() {
-			document.getElementById("box").style.display = "none";
-			document.getElementById("closebutton").style.display = "none";
-		}
+			function closebox() {
+				document.getElementById("box").style.display = "none";
+				document.getElementById("closebutton").style.display = "none";
+			}
 
 
 
-	</script>
+		</script>
 
 
-</body>
-</html>
-<!-- partial -->
-  
-</body>
+	</body>
+
 </html>
