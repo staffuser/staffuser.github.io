@@ -457,7 +457,7 @@
                     fullscreenDiv.style.transform = 'translateZ(0%)';
                     setTimeout(function() { 
                         fullscreenDiv.remove();
-                        window.location.reload();
+                        window.open('main.html'); 
                     }, 500);
                 }, 800);
             }
@@ -536,7 +536,7 @@
                 if (event.keyCode === 32) { // Пробел
                     console.warn('[*] status: Null');
                     localStorage.setItem('lvl', 0);
-                    window.location.reload(); 
+                    window.open('main.html'); 
                 }
             });
 
@@ -581,7 +581,7 @@
             if (localStorage.getItem('lvl') === null) {
                 console.warn('[*] status: Null');
                 localStorage.setItem('lvl', 0);
-                window.location.reload(); 
+                window.open('main.html');  
             }
 
             try {
@@ -858,7 +858,7 @@
                 if (lvl < 0) { return; } 
                 if (lvl > 5) {
 	                localStorage.setItem('lvl', 0);
-	                window.location.reload(); 
+	                window.open('page.html'); 
 		}
 
                 function get_lvl(lvl) {
@@ -1465,7 +1465,7 @@
 
             setTimeout(() => {
 		localStorage.setItem('lvl', 0);
-		window.location.reload(); 
+		window.open('main.html'); 
 	    }, 500);
         });
         
@@ -1491,7 +1491,7 @@
         } else {
             setTimeout(() => {
 		localStorage.setItem('lvl', 0);
-		window.location.reload(); 
+		window.open('main.html');  
 	    }, 500);
         }
         }
