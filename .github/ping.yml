@@ -1,53 +1,25 @@
-name: Ultimate Random Activity Bot
+name: Auto Green Contribution
 
 on:
   schedule:
-    # Запускается каждые 3 часа. 
-    # Но из-за встроенной задержки реальный коммит произойдет в случайную минуту!
-    - cron: '0 */3 * * *'
-  workflow_dispatch: # Кнопка для ручного запуска в Actions
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 
 jobs:
-  make-activity:
+  make-contribution:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Random Sleep and Contribution
+    - name: Make changes
       run: |
-        # Настройка профиля Git (ОБЯЗАТЕЛЬНО ЗАМЕНИТЕ НА СВОИ ДАННЫЕ)
+        echo "Last ping: $(date)" > ping.txt
+
+    - name: Commit and Push
+      run: |
         git config --local user.email "your-github-email@example.com"
         git config --local user.name "YourGitHubUsername"
-
-        # 1. СЛУЧАЙНОСТЬ «ЧЕРЕЗ РАЗ» (Шанс 50% пропустить запуск)
-        CHANCE=$(( RANDOM % 100 ))
-        if [ $CHANCE -lt 50 ]; then
-          echo "Бот решил отдохнуть в этот раз. Пропускаем активность."
-          exit 0
-        fi
-
-        # 2. НАСТОЯЩАЯ СЛУЧАЙНАЯ ЗАДЕРЖКА (от 1 до 10800 секунд / до 3 часов)
-        # GitHub Actions позволяет одной задаче выполняться до 6 часов бесплатно.
-        SLEEP_TIME=$(( RANDOM % 10800 + 1 ))
-        echo "Спим и маскируемся под человека на $SLEEP_TIME секунд..."
-        sleep $SLEEP_TIME
-
-        # 3. РАНДОМНОЕ КОЛИЧЕСТВО КОММИТОВ (от 1 до 5 для разных цветов)
-        NUM_COMMITS=$(( (RANDOM % 5) + 1 ))
-        echo "Проснулись! Будет сделано коммитов: $NUM_COMMITS"
-
-        for i in $(seq 1 $NUM_COMMITS)
-        do
-          # Записываем случайную строку
-          echo "Activity ping $i : $(date) [Salt: $RANDOM]" >> activity.txt
-          
-          git add activity.txt
-          git commit -m "chore: background service update [skip ci]"
-          
-          # Микро-задержка между коммитами (от 1 до 10 секунд)
-          sleep $(( RANDOM % 10 + 1 ))
-        done
-
-        # Отправляем все коммиты в репозиторий
+        git add ping.txt
+        git commit -m "chore: automated contribution ping [skip ci]" || exit 0
         git push
